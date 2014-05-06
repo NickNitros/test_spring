@@ -5,9 +5,9 @@
 
 	<bean name="customerRepository" class="test_spring.rep.HibernateCustomerRepositoryImpl" />
 
-	<bean name="customerService" class="test_spring.service.CustomerServiceImpl">
+	<bean name="customerService" class="test_spring.service.CustomerServiceImpl" autowire="byName">
 
-		<property name="customerRepository" ref="customerRepository"></property>
-
+		<!--  <constructor-arg index="0" ref="customerRepository"/> -->
+		
 	</bean>
 </beans>
