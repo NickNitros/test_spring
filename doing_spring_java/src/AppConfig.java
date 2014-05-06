@@ -1,6 +1,7 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import test_spring.service.CustomerService;
 import test_spring.service.CustomerServiceImpl;
@@ -10,6 +11,7 @@ import test_spring.service.CustomerServiceImpl;
 public class AppConfig {
 
 	@Bean(name = "customerService")
+	@Scope("singleton")
 	public CustomerService getCustomerService() {
 		CustomerServiceImpl customerService = new CustomerServiceImpl();
 		// customerService.setCustomerRepository(getCustomerRepository());

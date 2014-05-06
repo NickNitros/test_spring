@@ -5,7 +5,7 @@
 
 	<bean name="customerRepository" class="test_spring.rep.HibernateCustomerRepositoryImpl" />
 
-	<bean name="customerService" class="test_spring.service.CustomerServiceImpl" autowire="byName">
+	<bean name="customerService" class="test_spring.service.CustomerServiceImpl" autowire="byName" scope="singleton">
 
 		<!--  <constructor-arg index="0" ref="customerRepository"/> -->
 		
