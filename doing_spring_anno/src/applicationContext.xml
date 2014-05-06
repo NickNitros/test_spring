@@ -6,6 +6,6 @@
 
 	<context:annotation-config />
 
-	<context:component-scan base-package="test_spring" />
+	<context:component-scan base-package="test.spring" />
 
 </beans>
