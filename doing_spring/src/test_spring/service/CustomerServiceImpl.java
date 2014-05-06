@@ -4,16 +4,15 @@ import java.util.List;
 
 import test_spring.model.Customer;
 import test_spring.rep.CustomerRepository;
-import test_spring.rep.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	private CustomerRepository customerRepository;
 	
-	/* (non-Javadoc)
-	 * @see test_spring.service.CustomerService#findAll()
-	 */
-	@Override
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+
 	public List<Customer> findAll() {
 		return customerRepository.findAll();
 	}
